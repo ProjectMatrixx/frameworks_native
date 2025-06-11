@@ -1,5 +1,6 @@
 #
-# Copyright 2022 The Android Open Source Project
+# Copyright 2019 The Android Open Source Project
+# Copyright 2019 The halogenOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -14,12 +15,12 @@
 # limitations under the License.
 #
 
-# Provides overrides to configure the Dalvik heap for a 4GB phone
+# Provides overrides to configure the Dalvik heap for a 12 GiB phone
 
-PRODUCT_VENDOR_PROPERTIES += \
-    dalvik.vm.heapstartsize?=8m \
-    dalvik.vm.heapgrowthlimit?=192m \
-    dalvik.vm.heapsize?=512m \
-    dalvik.vm.heaptargetutilization?=0.6 \
-    dalvik.vm.heapminfree?=8m \
-    dalvik.vm.heapmaxfree?=16m
+PRODUCT_PROPERTY_OVERRIDES += \
+    dalvik.vm.heapstartsize=24m \
+    dalvik.vm.heapgrowthlimit=384m \
+    dalvik.vm.heapsize=512m \
+    dalvik.vm.heaptargetutilization=0.42 \
+    dalvik.vm.heapminfree=8m \
+    dalvik.vm.heapmaxfree=56m
